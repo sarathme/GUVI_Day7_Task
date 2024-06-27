@@ -51,10 +51,14 @@ Flag: ${el.flag},
     console.log(
       "------------Print the country that uses US dollars as currency.--------------------"
     );
-
+    // Used Optional chaining (?.).
     const USDollarCon = data.filter((el) => el.currencies?.USD);
     console.log(USDollarCon);
   }
+};
+
+xhr.onerror = () => {
+  console.log("Error in fetching data");
 };
 
 xhr.send();
