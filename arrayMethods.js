@@ -47,6 +47,13 @@ Flag: ${el.flag},
     console.log(
       `Total Population: ${new Intl.NumberFormat("en-IN").format(totalPop)}`
     );
+
+    console.log(
+      "------------Print the country that uses US dollars as currency.--------------------"
+    );
+
+    const USDollarCon = data.filter((el) => el.currencies?.USD);
+    console.log(USDollarCon);
   }
 };
 
